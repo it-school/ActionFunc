@@ -47,7 +47,7 @@ namespace ConsoleApplication1
         // Данный метод введен для соответствия сигнатуре делегата Func
         public static bool UserSalary(UserInfo obj1, UserInfo obj2)
         {
-            return obj1.Salary < obj2.Salary;
+            return obj1.Salary > obj2.Salary;
         }
     }
 
@@ -55,10 +55,11 @@ namespace ConsoleApplication1
     {
         static void Main()
         {
-            UserInfo[] userinfo = { new UserInfo("Дмитрий","Петров", 50000),
-                                    new UserInfo("Алексей","Ермолаев", 10000),
-                                    new UserInfo("Евгений","Малкин", 40000),
-                                    new UserInfo("Василий","Палкин", 100000)};
+            UserInfo[] userinfo = { new UserInfo("Дмитрий","Чалкин", 50000),
+                                    new UserInfo("Алексей","Галкин", 10000),
+												new UserInfo("Евгений","Малкин", 40000),
+												new UserInfo("Сергей","Залкинд", 5000),
+												new UserInfo("Василий","Палкин", 100000)};
 
             ArrSort.Sort(userinfo, UserInfo.UserSalary);
 
