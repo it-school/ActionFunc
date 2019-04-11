@@ -8,6 +8,10 @@ namespace ConsoleApplication1
 		public string Name { get; private set; }
 		public string Family { get; private set; }
 		public decimal Salary { get; private set; }
+        public int Age { get => age; set => age = value; }
+
+        private int age;
+
 
 		public UserInfo(string Name, string Family, decimal Salary)
 		{
@@ -105,7 +109,7 @@ namespace ConsoleApplication1
 			foreach (var ui in userInfos)
 				Console.WriteLine(ui);
 
-
+            
 		}
 	}
 }
